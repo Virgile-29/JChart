@@ -16,7 +16,6 @@ const pointsSin = {
 for (let i = -500; i < 500; i++) {
     pointsSin.x.push(i / 50);
     pointsSin.y.push(Math.sin(i / 10));
-    console.log(pointsSin.y)
 }
 
 const chart = new Chart(canva, "black", "red", "red");
