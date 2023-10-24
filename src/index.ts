@@ -2,8 +2,8 @@ import LineGraph from './LineGraph.js';
 import BarGraph from './BarGraph.js';
 
 const canva = document.getElementById('chart') as HTMLCanvasElement;
-canva.width = 600;
-canva.height = 600;
+canva.width = 500;
+canva.height = 500;
 const points = {
     x: [0, 1, 2, 3, 4, 5],
     y: [0, 1, 2, 3, 4, 5],
@@ -16,15 +16,15 @@ const pointsSin = {
 const group = [
     {
         label: "A",
-        value: 10
+        value: 100
     },
     {
         label: "B",
-        value: 20
+        value: 15
     },
     {
         label: "C",
-        value: 30
+        value: 150
     },
 ]
 
