@@ -1,7 +1,7 @@
-import Chart from './Chart.js';
+import BarGraph from './BarGraph.js';
 const canva = document.getElementById('chart');
-canva.width = 800;
-canva.height = 400;
+canva.width = 600;
+canva.height = 600;
 const points = {
     x: [0, 1, 2, 3, 4, 5],
     y: [0, 1, 2, 3, 4, 5],
@@ -9,10 +9,28 @@ const points = {
 const pointsSin = {
     x: [], y: []
 };
+const group = [
+    {
+        label: "A",
+        value: 10
+    },
+    {
+        label: "B",
+        value: 20
+    },
+    {
+        label: "C",
+        value: 30
+    },
+];
 for (let i = -500; i < 500; i++) {
     pointsSin.x.push(i / 50);
     pointsSin.y.push(Math.sin(i / 10));
 }
-const chart = new Chart(canva, "black", "red", "red");
-chart.draw(pointsSin);
+// DRAW LINE GRAPH
+// const chart = new LineGraph(canva, "black", "red", "red");
+// chart.draw(pointsSin);
+// DRAW BAR GRAPH
+const chart = new BarGraph(canva, group);
+chart.draw();
 //# sourceMappingURL=index.js.map
