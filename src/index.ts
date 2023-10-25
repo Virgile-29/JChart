@@ -1,6 +1,10 @@
 import LineGraph from './LineGraph.js';
 import BarGraph from './BarGraph.js';
 
+/**
+ * Test Index file to try out JCharts
+ */
+
 const canva = document.getElementById('chart') as HTMLCanvasElement;
 canva.width = 500;
 canva.height = 500;
@@ -16,7 +20,7 @@ const pointsSin = {
 const group = [
     {
         label: "A",
-        value: 100
+        value: 77
     },
     {
         label: "B",
@@ -24,11 +28,11 @@ const group = [
     },
     {
         label: "C",
-        value: 150
+        value: 10
     },
 ]
 
-for (let i = -500; i < 500; i++) {
+for (let i = -5000; i < 5000; i++) {
     pointsSin.x.push(i / 50);
     pointsSin.y.push(Math.sin(i / 10));
 }

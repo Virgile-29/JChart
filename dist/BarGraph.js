@@ -3,8 +3,8 @@
     * @param canva HTMLCanvasElement
     * @param data Array<{ label: string, value: number }>
     *TODO:  FIND A WAY TO DISPLAY THE SCALE VALUES PROPORTIONALLY
-    *       TO THE CANVA SIZE AND DATA VALUES
-    *TODO: Add Config
+    *       TO THE CANVA SIZE AND DATA VALUES WITH /10 SCALE VALUES
+    *TODO: Add Configuration to customize Style
  */
 export default class BarGraph {
     /**
@@ -44,6 +44,7 @@ export default class BarGraph {
         for (let i = 0; i < this.data.length; i++) {
             this.scaledDataValues.push(this.data[i].value * scale);
         }
+        console.log(this.scaledDataValues);
     }
     getCoefficient() {
         const max = this.data[this.data.length - 1].value;
@@ -111,8 +112,8 @@ export default class BarGraph {
             ctx.strokeRect(x, y, barWidth, barValue);
         }
         // Draw scale text on y-axis
-        ctx.font = "20px Arial";
-        ctx.fillStyle = "black";
+        ctx.font = "20px Arial"; // TODO: Add to config 
+        ctx.fillStyle = "black"; // TODO: 
         ctx.textAlign = "center";
         ctx.fillText("0", 10, this.canva.height);
         // Draw a small line on the y-axis to indicate the scale

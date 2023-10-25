@@ -5,7 +5,7 @@
     * @param axisColor string
     * @param lineColor string
     * @param pointColor string
-    
+    *
  */
 export default class LineGraph {
     constructor(canva, axisColor = "black", lineColor = "black", pointColor = "red") {
